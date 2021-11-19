@@ -46,9 +46,11 @@ class App extends Component {
           {productsListArr}
         </div>
         <div>
-          <h2>Cart</h2>
-          <ul>Baseball Glove: $19.99</ul>
-          <ul>Old Newspapers: $7.50</ul>
+          <ul>
+            <h2>Cart</h2>
+          </ul>
+            <li>Baseball Glove: $19.99</li>
+            <li>Old Newspapers: $7.50</li>
           <h3>Subtotal: $27.49</h3>
           <h3>Tax: $1.37</h3>
           <h3>Total: $28.86</h3>
