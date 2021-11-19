@@ -31,7 +31,7 @@ class App extends Component {
         <div>
           <h3>{name}</h3>
           <div>Price: {formatPrice(price)}</div>
-          <button>Add To Cart</button>
+          <button type="submit">Add To Cart</button>
           <img src={img} alt={name}/>
           <div>{description}</div>
         </div>
@@ -45,6 +45,7 @@ class App extends Component {
         <div>
           {productsListArr}
         </div>
+        
         <div>
           <ul>
             <h2>Cart</h2>
@@ -54,6 +55,38 @@ class App extends Component {
           <h3>Subtotal: $27.49</h3>
           <h3>Tax: $1.37</h3>
           <h3>Total: $28.86</h3>
+        </div>
+
+        <div>
+          <form>
+          <h2>Checkout</h2>
+          <label htmlFor="first-name">First Name</label>
+          <br/>
+          <input type="text" id="first-name" />
+          <br/>
+          
+          <label htmlFor="last-name">Last Name</label>
+          <br/>
+          <input type="text" id="last-name" />
+          <br/>
+          
+          <label htmlFor="email">Email</label>
+          <br/>
+          <input type="text" id="email" />
+          <br/>
+          
+          <label htmlFor="credit-card">Credit Card</label>
+          <br/>
+          <input type="text" id="credit-card" />
+          <br/>
+          
+          <label htmlFor="zip-code">Zip Code</label>
+          <br/>
+          <input type="text" id="zip-code" />
+          <br/>
+          
+          <button type="submit">Buy Now</button>
+          </form>
         </div>
       </div>
       
