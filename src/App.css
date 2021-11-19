@@ -1,1 +1,31 @@
+.products > *{
+    border: 1px solid black;
+}
+
+.products {
+    display: grid;
+    grid-template-areas: "products products cart"
+                         "products products checkout"
+                         "products products empty";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.products > #products-container {
+    grid-area: products;
+    
+}
+
+
+.products > #cart-container {
+    grid-area: cart;
+}
+
+.products > #checkout-container {
+    grid-area: checkout;
+}
+#products-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 

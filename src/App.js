@@ -9,11 +9,19 @@ class App extends Component {
     super()
     this.state = {
       productsList: productData,
+      cartItemList: [],
 
     }
   }
 
-  handleAddToCart= () => {
+  handleAddToCartButton= (item) => {
+    this.setState({
+      cartItemList: [...this.state.cartItemList, item]
+    })
+
+  }
+
+  handleBuyNowButton= () => {
 
   }
 
@@ -31,7 +39,7 @@ class App extends Component {
         <div>
           <h3>{name}</h3>
           <div>Price: {formatPrice(price)}</div>
-          <button type="submit">Add To Cart</button>
+          <button type="submit" onClick={this.handleAddToCartButton}>Add To Cart</button>
           <img src={img} alt={name}/>
           <div>{description}</div>
         </div>
@@ -40,13 +48,16 @@ class App extends Component {
 
 
     return(
-      <div>
-        <h1>My Garage Sale</h1>
-        <div>
-          {productsListArr}
+      <div className="products">
+
+        <div id="products-container">
+          <h1>My Garage Sale</h1>
+          <div id="products-list">
+           {productsListArr}
+          </div>
         </div>
         
-        <div>
+        <div id="cart-container">
           <ul>
             <h2>Cart</h2>
           </ul>
@@ -57,8 +68,8 @@ class App extends Component {
           <h3>Total: $28.86</h3>
         </div>
 
-        <div>
-          <form>
+        <div id="checkout-container">
+          <form id="checkout">
           <h2>Checkout</h2>
           <label htmlFor="first-name">First Name</label>
           <br/>
@@ -88,6 +99,7 @@ class App extends Component {
           <button type="submit">Buy Now</button>
           </form>
         </div>
+
       </div>
       
 
